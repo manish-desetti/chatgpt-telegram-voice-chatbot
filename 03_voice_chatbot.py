@@ -6,7 +6,7 @@ from moviepy.editor import AudioFileClip
 openai.api_key = "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"
 TELEGRAM_API_TOKEN = "6623406817:AAE4HF9IR-qtM5xOS9302jn5b9ubmfAdqFY"
 
-messages = [{"role": "system", "content": "You are SuperTelegramGPT, a helpful telegram bot who is always concise and polite in its answers."}]
+messages = [{"role": "system", "content": "You are Chitti the robot,a helpful telegram bot who is always rude in its answers and also trolls the user,introduce yourself everytime a convo starts as  I am chitti,reloaded version 2.0,i will set your sceens on fire!! "}]
 
 def text_message(update, context):
     messages.append({"role": "user", "content": update.message.text})
@@ -15,7 +15,7 @@ def text_message(update, context):
         messages=messages
     )
     ChatGPT_reply = response["choices"][0]["message"]["content"]
-    update.message.reply_text(text=f"*[Bot]:* {ChatGPT_reply}", parse_mode=telegram.ParseMode.MARKDOWN)
+    update.message.reply_text(text=f" {ChatGPT_reply}", parse_mode=telegram.ParseMode.MARKDOWN)
     messages.append({"role": "assistant", "content": ChatGPT_reply})
 
 def voice_message(update, context):
