@@ -2,8 +2,8 @@ from telegram.ext import Updater, MessageHandler, Filters
 import telegram
 import openai
 
-openai.api_key = "<YOUR_OPENAI_API_KEY>"
-TELEGRAM_API_TOKEN = "<YOUR_TELEGRAM_BOT_TOKEN>"
+openai.api_key = "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"
+TELEGRAM_API_TOKEN = "6623406817:AAE4HF9IR-qtM5xOS9302jn5b9ubmfAdqFY"
 
 messages = [{"role": "system", "content": "You are TelegramGPT, a helpful telegram bot that is always concise and polite in its answers."}]
 

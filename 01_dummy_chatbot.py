@@ -1,13 +1,13 @@
 from telegram.ext import Updater, MessageHandler, Filters
 import openai
 
-openai.api_key = "<YOUR_OPENAI_API_KEY>"
-TELEGRAM_API_TOKEN = "<YOUR_TELEGRAM_BOT_TOKEN>"
+openai.api_key = "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"
+TELEGRAM_API_TOKEN = "6623406817:AAE4HF9IR-qtM5xOS9302jn5b9ubmfAdqFY"
 
 def text_message(update, context):
     response = openai.ChatCompletion.create(
         model="gpt-3.5-turbo",
-        messages= [{"role": "system", "content": "Ass a silly phrase after each one of your answers"}]
+        messages= [{"role": "system", "content": "You are a helpful assistant that always responds with a joke"}]
     )
     update.message.reply_text(response["choices"][0]["message"]["content"])
 
